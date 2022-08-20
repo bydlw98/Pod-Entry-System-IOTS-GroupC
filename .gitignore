@@ -1,0 +1,28 @@
+.venv/
+
+# Python
+__pycache__
+**/__pycache__
+*.pyc
+
+# Ctags tag files
+TAGS
+tags
+**/tags
+
+# Arduino
+config.h
+
+# Config Files
+assets/configs/
+assets/logs
+.vscode/
+
+# SSL Certificate
+*.pem
+assets/ssl-certificate/certsv2/
+*.key
+*.pem
+*.csr
+*.crt
+*.srl

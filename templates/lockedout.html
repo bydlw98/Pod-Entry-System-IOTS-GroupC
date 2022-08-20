@@ -1,0 +1,19 @@
+{% extends "layout.html" %} {% block content %}
+
+<div class="center">
+    <h1>
+        Error! You haved failed to login for 3 attempts.<br />
+        Please wait for 3 minutes to try again
+    </h1>
+	<script>
+		// After 3 minutes, redirect to login page
+		var timer = setTimeout(function () {
+			window.location = "/";
+		}, 1000 * 60 * 3);
+	</script>
+</div>
+
+{% endblock %}
+
+<!-- vim:ft=html
+-->

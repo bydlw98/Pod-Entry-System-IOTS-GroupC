@@ -1,0 +1,43 @@
+{% extends "layout.html" %} {% block content %}
+
+<div class="center">
+	<h1>Study Pod Signup Page</h1>
+	<p>
+		Please enter the username and password you want to use for your account.<br />
+		Please make sure to use a strong password with:<br />
+		1. At least 8 characters or more<br />
+		2. Uses a mix of special characters, lowercase, uppercase, numbers<br />
+
+		Make sure to never give your username and password to another person
+	</p>
+	<form method="POST" onsubmit="account_created_popup()">
+		<label>Username:</label>
+		<input
+			type="text"
+			name="signup-username"
+			placeholder="Enter Username"
+			autocomplete="off"
+			required
+		/>
+		<div class="vertical-spacer"></div>
+
+		<label>Password:</label>
+		<input
+			type="password"
+			name="signup-password"
+			placeholder="Enter Password"
+			autocomplete="off"
+            pattern="^\S*(?=\S{8,})(?=\S*\d)(?=\S*[A-Z])(?=\S*[a-z])(?=\S*[!@#$%^&*? ])\S*$"
+            title="Password does not match requirements"
+			required
+		/>
+
+		<div class="vertical-spacer"></div>
+		<input type="submit" value="Sign Up" />
+	</form>
+</div>
+
+{% endblock %}
+
+<!-- vim:ft=html
+-->

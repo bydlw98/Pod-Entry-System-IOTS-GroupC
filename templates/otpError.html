@@ -1,0 +1,20 @@
+{% extends "layout.html" %} {% block content %}
+
+<div class="center">
+	<h1>
+		Error either OTP is wrong or you take too long to enter OTP<br />
+		Please try again
+	</h1>
+
+	<script>
+		// After 10s redirect to login page
+		var timer = setTimeout(function () {
+			window.location = "/";
+		}, 1000 * 10);
+	</script>
+</div>
+
+{% endblock %}
+
+<!-- vim: ft=html
+-->

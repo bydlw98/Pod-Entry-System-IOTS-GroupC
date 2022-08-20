@@ -1,0 +1,24 @@
+{% extends "layout.html" %} {% block content %}
+
+<div class="center">
+	<h1>Pod Login Page</h1>
+	<p>An OTP has been sent to your email, please enter the OTP to complete login</p>
+	<script>
+		// If 3 minutes still haven't enter OTP, redirect to login page
+		var timer = setTimeout(function () {
+			window.location = "/";
+		}, 1000 * 60 * 3);
+	</script>
+	<form method="POST">
+		<label>OTP:</label>
+		<input type="text" name="OTP-input" placeholder="Enter OTP" autocomplete="off" />
+
+		<div class="vertical-spacer"></div>
+		<input type="submit" value="Login" />
+	</form>
+</div>
+
+{% endblock %}
+
+<!-- vim:ft=html
+-->

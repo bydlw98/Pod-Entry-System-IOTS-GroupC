@@ -1,0 +1,40 @@
+{% extends "layout.html" %} {% block content %}
+
+<div class="center">
+	<h1>Pod Login Page</h1>
+	<div class="vertical-spacer"></div>
+	<form method="POST">
+		<label>Username:</label>
+		<input
+			name="login-username"
+			type="text"
+			placeholder="Enter Username"
+            title="Please enter Username"
+			autocomplete="off"
+			required
+		/>
+		<div class="vertical-spacer"></div>
+
+		<label>Password:</label>
+		<input
+			name="login-password"
+			type="password"
+			placeholder="Enter Password"
+            title="Please enter Password"
+			autocomplete="off"
+			required
+		/>
+
+		<div class="vertical-spacer"></div>
+		<input type="submit" value="Login" />
+	</form>
+	<div class="signup-div">
+		<p>Not a member</p>
+		<a href="/signup">Sign Up</a>
+	</div>
+</div>
+
+{% endblock %}
+
+<!--  vim:ft=html
+-->
